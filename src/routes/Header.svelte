@@ -1,129 +1,105 @@
 <script>
-	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+	import coffee from './img/bg-coffee.png';
+
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
+	<!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5 py-3 align-items-center">
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-start">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                    <h2 class="mb-0">+84 98765432</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand ms-lg-5">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Coffee</span>Dev</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+		<marquee><h3><span class="text-secondary">ᵛᶰシ•Black as night, sweet as sin – Đen như đêm, ngọt như tội lỗi•ミ★</span><span class="text-primary">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><span class="text-secondary">ᵛᶰシ•Coffee understand – Cà phê hiểu chúng ta•ミ★</span><span class="text-primary">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><span class="text-secondary">ᵛᶰシ•Phiêu lưu trong đời là tốt; sự nhất quán trong cà phê còn tốt hơn•ミ★</span><span class="text-primary">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><span class="text-secondary">ᵛᶰシ•Cà phê là người bạn không thể thiếu trong cuộc sống•ミ★</span></h3></marquee>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
+    </div>
+    <!-- Topbar End -->
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none">
+            <h1 class="m-0 display-4 text-secondary"><span class="text-white">Coffee</span>Dev</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="/" class="nav-item nav-link">Trang chủ</a>
+                <a href="/about" class="nav-item nav-link">Giới thiệu</a>
+                <a href="/sverdle" class="nav-item nav-link">Dịch vụ</a>
+                <a href="/" class="nav-item nav-link">Sản phẩm</a>
+                <div class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Loại Coffee</a>
+                    <div class="dropdown-menu m-0">
+						<a href="/" class="dropdown-item">Coffee Arabica</a>
+						<a href="/" class="dropdown-item">Coffee Cherry</a>
+                        <a href="/" class="dropdown-item">Coffee Moka</a>
+                        <a href="/" class="dropdown-item">Coffee Robusta</a>
+                        <a href="/" class="dropdown-item">Coffee Culi</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src={coffee} alt="">
+                    <div class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="text-start p-5" style="max-width: 900px;">
+                            <h3 class="text-white">Coffee giống như tình bạn:</h3>
+                            <h1 class="display-1 text-white mb-md-4">Đậm đà, nồng ấm và bền chặt</h1>
+                            <a href="/" class="btn btn-primary py-md-3 px-md-5 me-3">Chi tiết</a>
+                            <a href="/" class="btn btn-secondary py-md-3 px-md-5">Liên hệ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src={coffee} alt="">
+                    <div class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="text-start p-5" style="max-width: 900px;">
+                            <h3 class="text-white">Coffee giống như tình yêu:</h3>
+                            <h1 class="display-1 text-white mb-md-4">Ban đầu thấy đắng, sau ngọt ngào</h1>
+                            <a href="/" class="btn btn-primary py-md-3 px-md-5 me-3">Chi tiêt</a>
+                            <a href="/" class="btn btn-secondary py-md-3 px-md-5">Liên hệ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
 </header>
-
-<style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
-	}
-</style>
