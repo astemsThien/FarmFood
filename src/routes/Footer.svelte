@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-lg-n5">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center hs-100 bg-secondary p-5">
                         <h4 class="text-white">Bản tin</h4>
                         <h6 class="text-white">Theo dõi Bản tin của chúng tôi</h6>
                         <p>Cà phê khiến ta mạnh mẽ, nghiêm nghị và thông thái</p>
@@ -79,5 +79,5 @@
 
 
     <!-- Back to Top -->
-    <a href="/" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="/" class="btn btn-secondary py-3 fs-4 back-to-top rounded-circle fss-4"><i class="bi bi-arrow-up"></i></a>
 </footer>

@@ -43,12 +43,12 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse " id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
                 <a href="/" class="nav-item nav-link">Trang chủ</a>
                 <a href="/about" class="nav-item nav-link">Giới thiệu</a>
-                <a href="/sverdle" class="nav-item nav-link">Dịch vụ</a>
-                <a href="/" class="nav-item nav-link">Sản phẩm</a>
+                <a href="/servicess" class="nav-item nav-link">Dịch vụ</a>
+                <a href="/product" class="nav-item nav-link">Sản phẩm</a>
                 <div class="nav-item dropdown">
                     <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Loại Coffee</a>
                     <div class="dropdown-menu m-0">
