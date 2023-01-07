@@ -1,6 +1,6 @@
 <script>
+	import Header from './login-signup/+page.svelte';
 	import coffee from './img/bg-coffee.png';
-
 </script>
 
 <header>
@@ -22,10 +22,10 @@
             </div>
             <div class="col-lg-3">
                 <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fas fa-shopping-cart"></a>
+                    <!-- <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-instagram"></i></a> -->
                 </div>
             </div>
         </div>
@@ -59,7 +59,9 @@
                         <a href="/" class="dropdown-item">Coffee Culi</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+                <a href="/contact" class="nav-item nav-link">Liên hệ</a>
+                <!-- <a href="/" class="nav-item nav-link" style="margin-left: 50px;"><i class="fas fa-shopping-cart"></i></a> -->
+                <Header/>
             </div>
         </div>
     </nav>
