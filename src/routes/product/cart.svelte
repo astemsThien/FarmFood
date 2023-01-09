@@ -26,8 +26,7 @@
 					}
 	}
 
-		$: total = $cart.reduce((sum, item) => sum + item.price.toString() * item.quantity, 0)
-	
+		$: total = $cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 </script>
 
 <div class="cart-list">
@@ -37,18 +36,18 @@
 			<p class="shop-cart">Số tiền</p>
 		</div>
 		
-	{#each $cart as item }
-		{#if item.quantity > 0}
+	{#each $cart as product }
+		{#if product.quantity > 0}
 		<div class="cart-item">
-			<img width="50" src={item.image} alt={item.name}/>
+			<img width="50" src={product.image} alt={product.name}/>
 			<div class="shop-cart">
 				<div class="shop-item">
-					<button class="left" on:click={() => plusItem(item)}>+</button>
-					&ensp;&ensp;&ensp;&ensp;{item.quantity}&ensp;&ensp;&ensp;&ensp;
-					<button class="right" on:click={() => minusItem(item)}>-</button>
+					<button class="left" on:click={() => plusItem(product)}>+</button>
+					&ensp;&ensp;&ensp;&ensp;{product.quantity}&ensp;&ensp;&ensp;&ensp;
+					<button class="right" on:click={() => minusItem(product)}>-</button>
 				</div>
 			</div>
-			<p class="shop-cart">{item.price.toString() * item.quantity} VND</p>
+			<p class="shop-cart">{product.price.toString() * product.quantity} VND</p>
 		</div>
 		{/if}
 	{/each}

@@ -10,6 +10,7 @@
 	import phong from './img/phong.png'
 	import tinh from './img/tinh.png'
 	import thien from './img/thien.png'
+	
 </script>
 
 <svelte:head>
