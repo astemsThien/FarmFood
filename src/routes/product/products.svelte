@@ -61,12 +61,14 @@ button
 .container .product-card {
     width: 20%;
     position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
+    box-shadow: 0 2px 7px #aaa9a9;
     margin: 20px 10px;
     background: #fafafa;
     display: flex;
     flex-direction: column;
     transition: 0.3s ease-in-out;
+    
+    
 }
 
 .badge {
@@ -102,6 +104,8 @@ button
 .product-details {
     padding: 15px;
     background: #f0f0f0;
+    box-shadow: 0 2px 7px #aaa9a9;
+
 }
 
 .product-category {

@@ -1,5 +1,5 @@
 <script>
-	import {cart } from './card.js'
+	import { cart } from './card.js'
     
 	
 	const minusItem = (product) => {
