@@ -1,6 +1,7 @@
 <script>
 	import Header from './login-signup/+page.svelte';
 	import coffee from './img/bg-coffee.png';
+    import {cart} from './product/card.js';
 </script>
 
 <header>
@@ -22,7 +23,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fas fa-shopping-cart"></a>
+                    <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/cart"><i class="fas fa-shopping-cart">({$cart.length})</i></a>
                     <!-- <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-secondary py-md-3 px-md-4 rounded-circle" href="/"><i class="fab fa-instagram"></i></a> -->
