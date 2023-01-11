@@ -1,5 +1,7 @@
 <script>
+	import Login from './login.svelte'
 
+	
 </script>
 
 
@@ -8,8 +10,4 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-
-
-<header>
-    <a href="/404" class="nav-item nav-link">Đăng nhập</a>
-</header>
+<Login/>

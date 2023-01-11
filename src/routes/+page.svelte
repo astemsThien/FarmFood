@@ -11,6 +11,8 @@
 	import tinh from './img/tinh.png'
 	import thien from './img/thien.png'
 	
+
+	
 </script>
 
 <svelte:head>

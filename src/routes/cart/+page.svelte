@@ -1,10 +1,12 @@
 <script>
 	import Cart from '../product/cart.svelte';
+	import Shopping from './cart.svelte';
 </script>
 
 <section>
 	<h3>Giỏ hàng</h3>
     <Cart />
+	<!-- <Shopping/> -->
 </section>
 
 <style>

@@ -1,183 +1,81 @@
-<script>
-	import { cart, products } from './card.js'
-    
-	
-	const minusItem = (product) => {
-		for(let item of $cart) {
-				if(item.id === product.id) {
-					if(product.quantity > 1 ) {
-							product.quantity -= 1
-							$cart = $cart
-					} else {
-							$cart = $cart.filter((cartItem) => cartItem != product)
-					}
-					return;
-				}
-		}
-	}
-	
-	const plusItem = (product) => {
-			for(let item of $cart) {
-							if(item.id === product.id) {
-								product.quantity += 1
-								$cart = $cart;
-								return;
-							}
-					}
-	}
-
-		$: total = $cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
-		$: sums = $cart.reduce((product) =>  product.price * product.quantity, 0)
-
-		
-</script>
-
-<!-- start shopping cart -->
-
-<!-- <h1>Shopping Cart</h1> -->
+<h1>Shopping Cart</h1>
 
 <div class="shopping-cart">
 
   <div class="column-labels">
-	<label class="product-image" for="">Hình ảnh</label>
-	<label class="product-details" for="">Sản phẩm</label>
-	<label class="product-price" for="">Tiền</label>
-	<label class="product-quantity" for="">Số lượng</label>
-	<label class="product-removal" for="">Xóa</label>
-	<label class="product-line-price" for="">Tổng tiền</label>
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
   </div>
-  {#each $cart as product }
-  {#if product.quantity > 0}
+
   <div class="product">
     <div class="product-image">
-		<img src={product.image} alt="Hình ảnh">
+      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
     </div>
     <div class="product-details">
-      <div class="product-title">{product.name}</div>
+      <div class="product-title">Dingo Dog Bones</div>
       <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
     </div>
-    <div class="product-price">{product.price} đ</div>
+    <div class="product-price">12.99</div>
     <div class="product-quantity">
-		<button class="left" on:click={() => plusItem(product)}>+</button>
-		&ensp;&ensp;&ensp;&ensp;{product.quantity}&ensp;&ensp;&ensp;&ensp;
-		<button class="right" on:click={() => minusItem(product)}>-</button>
+      <input type="number" value="2" min="1">
     </div>
     <div class="product-removal">
       <button class="remove-product">
         Remove
       </button>
     </div>
-    <div class="product-line-price">{product.price * product.quantity} đ</div>
+    <div class="product-line-price">25.98</div>
   </div>
-  
-  {/if}
-  {/each}
+
+  <div class="product">
+    <div class="product-image">
+      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+      <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+    </div>
+    <div class="product-price">45.99</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">45.99</div>
+  </div>
+
   <div class="totals">
     <div class="totals-item">
-		<label for="">Tiền: </label>
-      <div class="totals-value" id="cart-subtotal">{sums} đ</div>
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">71.97</div>
     </div>
     <div class="totals-item">
-		<label for="">Thuế vat (5%): </label>
+      <label>Tax (5%)</label>
       <div class="totals-value" id="cart-tax">3.60</div>
     </div>
     <div class="totals-item">
-		<label for="">Số lượng sản phẩm: </label>
-      <div class="totals-value" id="cart-shipping">{$cart.length}</div>
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
     </div>
     <div class="totals-item totals-item-total">
-		<label for="">Tổng tiền: </label>
-      <div class="totals-value" id="cart-total">{total} đ</div>
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">90.57</div>
     </div>
   </div>
-      <button class="checkout">Thanh toán</button>
+      
+      <button class="checkout">Checkout</button>
 
 </div>
 
-<!-- shopping cart end -->
-
-<!-- <div class="cart-list">
-		<div class="cart-item">
-			<p class="shop-cart" style="width: 30%; margin:0 auto;font-weight: 600;">Sản phẩm</p>
-			<div class="shop-cart">số lượng</div>
-			<p class="shop-cart">Số tiền</p>
-		</div>
-		
-	{#each $cart as product }
-		{#if product.quantity > 0}
-		<div class="cart-item">
-			<img width="50" src={product.image} alt={product.name}/>
-			<div class="shop-cart">
-				<div class="shop-item">
-					<button class="left" on:click={() => plusItem(product)}>+</button>
-					&ensp;&ensp;&ensp;&ensp;{product.quantity}&ensp;&ensp;&ensp;&ensp;
-					<button class="right" on:click={() => minusItem(product)}>-</button>
-				</div>
-			</div>
-			<p class="shop-cart">{product.price.toString() * product.quantity} VND</p>
-		</div>
-		{/if}
-	{/each}
-	<div class="total">
-		<h4>Tổng thanh toán ({$cart.length} sản phẩm): {total} đ</h4>
-		
-	</div>
-	<button style="float: right; margin: 10px;">Mua hàng</button>
-</div> -->
-
-
 <style>
-	/* .cart-item {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		/* border: 1px solid; *
-		border-bottom: 1px solid gray;
-		margin: 5px;
-		padding: 5px;
-	}
-
-	img{
-		
-		width: 30%;
-		margin: 0 auto;
-	}
-
-
-	.shop-cart{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 15px;
-		font-weight: 600;
-	}
-
-	button.left{
-		margin-right: 15px;
-		width: 3em;
-		background-color: white;
-		color: gray;
-		border: 1px solid gray;
-	}
-	button.right{
-		margin-left: 15px;
-		width: 3em;
-		background-color: white;
-		color: gray;
-		border: 1px solid gray;
-	}
-
-	.total {
-		text-align: right;
-		margin-top: 25px;
-	}
-	
-	.cart-list {
-		border: 2px solid;
-		padding: 10px;
-		
-	} */
-
-	.product-image {
+    .product-image {
     float: left;
     width: 20%;
 }
@@ -213,7 +111,7 @@
     zoom: 1;
 }
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
-    content: '';
+    content: '$';
 }
 body {
     padding: 0px 30px 30px 20px;
@@ -232,7 +130,6 @@ label {
 .column-labels label {
     padding-bottom: 15px;
     margin-bottom: 15px;
-	margin-top: 100px;
     border-bottom: 1px solid #eee;
 }
 .column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
@@ -367,4 +264,5 @@ label {
         width: 40%;
     }
 }
-</
+
+</style>
