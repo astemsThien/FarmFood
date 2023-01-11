@@ -29,7 +29,7 @@ const addToCart = (product) => {
             <div class="product-details">
                 <span class="product-category">{product.name}</span>
                 <h4>{product.name}</h4>
-                <p>{product.id}</p>
+                <p>{product.content}</p>
                 <div class="product-bottom-details">
                     <div class="product-price text-secondary"><small style="color: red;">{product.prices.toString()} đ</small>{product.price.toString()} đ</div>
                     <div class="product-links">

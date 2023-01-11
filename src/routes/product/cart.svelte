@@ -1,7 +1,7 @@
 <script>
 	import { cart, products } from './card.js'
     
-	
+	// giảm 1 sản phẩm (-)
 	const minusItem = (product) => {
 		for(let item of $cart) {
 				if(item.id === product.id) {
@@ -15,7 +15,7 @@
 				}
 		}
 	}
-	
+	// tăng 1 sản phẩm (+)
 	const plusItem = (product) => {
 			for(let item of $cart) {
 							if(item.id === product.id) {
@@ -25,11 +25,12 @@
 							}
 					}
 	}
-
-		$: total = $cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
-		$: sums = $cart.reduce((product) =>  product.price * product.quantity, 0)
-
-		
+		// tổng sản phẩm trong giỏ hàng
+		$: total = $cart.reduce((sum, item) => sum + item.price * item.quantity + 36, 0)
+		// xóa 1 sản phẩm trong giỏ hàng
+		const deleteProduct = (product) => {
+			$cart =  $cart.filter((proc) => proc.id != product.id)
+		}
 </script>
 
 <!-- start shopping cart -->
@@ -54,7 +55,7 @@
     </div>
     <div class="product-details">
       <div class="product-title">{product.name}</div>
-      <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+      <p class="product-description">{product.content}</p>
     </div>
     <div class="product-price">{product.price} đ</div>
     <div class="product-quantity">
@@ -63,8 +64,8 @@
 		<button class="right" on:click={() => minusItem(product)}>-</button>
     </div>
     <div class="product-removal">
-      <button class="remove-product">
-        Remove
+      <button class="remove-product" on:click={() => deleteProduct(product)}>
+        Xóa
       </button>
     </div>
     <div class="product-line-price">{product.price * product.quantity} đ</div>
@@ -73,13 +74,13 @@
   {/if}
   {/each}
   <div class="totals">
-    <div class="totals-item">
+    <!-- <div class="totals-item">
 		<label for="">Tiền: </label>
       <div class="totals-value" id="cart-subtotal">{sums} đ</div>
-    </div>
+    </div> -->
     <div class="totals-item">
 		<label for="">Thuế vat (5%): </label>
-      <div class="totals-value" id="cart-tax">3.60</div>
+      <div class="totals-value" id="cart-tax">36.000 đ</div>
     </div>
     <div class="totals-item">
 		<label for="">Số lượng sản phẩm: </label>
@@ -367,4 +368,4 @@ label {
         width: 40%;
     }
 }
-</
+</style>
