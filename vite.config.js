@@ -5,7 +5,9 @@ const config = {
 	plugins: [sveltekit()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
+	},
+	server:{port:9999},
+	
 };
 
 export default config;

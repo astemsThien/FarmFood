@@ -236,8 +236,8 @@
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="d-block bg-white h-100 text-center p-5 pb-lg-0">
-					<p>Nhà mới Quận 7 toạ lạc tại The Grace Tower, thuộc khu phố nhộn nhiệp, sầm uất. Cửa hàng nổi bật với không gian nhỏ nhắn nhưng lại có nhiều nguồn sáng tự nhiên, mang đến sự hứng khởi, năng động</p>
+				<div class="d-block bg-white h-100 text-justify p-5 pb-lg-0 ">
+					<p >Nhà mới Quận 7 toạ lạc tại The Grace Tower, thuộc khu phố nhộn nhiệp, sầm uất. Cửa hàng nổi bật với không gian nhỏ nhắn nhưng lại có nhiều nguồn sáng tự nhiên, mang đến sự hứng khởi, năng động</p>
 					<img class="img-fluid" src={master1} alt="">
 				</div>
 			</div>
@@ -357,7 +357,7 @@
 							<img class="img-fluid w-100" src={thien} alt="">
 							<div class="position-absolute start-0 bottom-0 w-100 py-3 px-4" style="background: rgba(52, 173, 84, .85);">
 								<h4 class="text-white">Nguyễn Thanh Thiên</h4>
-								<span class="text-white">Back-End</span>
+								<!-- <span class="text-white">Back-End</span> -->
 							</div>
 						</div>
 					</div>
@@ -378,7 +378,7 @@
 							<img class="img-fluid w-100" src={tinh} alt="">
 							<div class="position-absolute start-0 bottom-0 w-100 py-3 px-4" style="background: rgba(52, 173, 84, .85);">
 								<h4 class="text-white">Võ Đức Tính</h4>
-								<span class="text-white">Database</span>
+								<!-- <span class="text-white">Database</span> -->
 							</div>
 						</div>
 					</div>
@@ -399,7 +399,7 @@
 							<img class="img-fluid w-100" src={phong} alt="">
 							<div class="position-absolute start-0 bottom-0 w-100 py-3 px-4" style="background: rgba(52, 173, 84, .85);">
 								<h4 class="text-white">Đặng Hoài Phong</h4>
-								<span class="text-white">Front-End</span>
+								<!-- <span class="text-white">Front-End</span>	 -->
 							</div>
 						</div>
 					</div>
